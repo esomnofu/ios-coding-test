@@ -12,6 +12,8 @@
 		8451457323B61B3800E41CEF /* helperfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451457223B61B3800E41CEF /* helperfunctions.swift */; };
 		8451457623B61DB600E41CEF /* Pods_RailsCommitsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8451457523B61DB600E41CEF /* Pods_RailsCommitsApp.framework */; };
 		8451457823B6267400E41CEF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451457723B6267400E41CEF /* constants.swift */; };
+		8451457A23B637F900E41CEF /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451457923B637F900E41CEF /* AttributedText.swift */; };
+		8451457C23B657BA00E41CEF /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451457B23B657BA00E41CEF /* UIActivityIndicatorView.swift */; };
 		84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE695223B60C4E00AB4B13 /* AppDelegate.swift */; };
 		84DE695823B60C4E00AB4B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695623B60C4E00AB4B13 /* Main.storyboard */; };
 		84DE695A23B60C6A00AB4B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695923B60C6A00AB4B13 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		8451457223B61B3800E41CEF /* helperfunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helperfunctions.swift; sourceTree = "<group>"; };
 		8451457523B61DB600E41CEF /* Pods_RailsCommitsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RailsCommitsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451457723B6267400E41CEF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		8451457923B637F900E41CEF /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		8451457B23B657BA00E41CEF /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		84DE694F23B60C4E00AB4B13 /* RailsCommitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailsCommitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE695223B60C4E00AB4B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DE695723B60C4E00AB4B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				8451457223B61B3800E41CEF /* helperfunctions.swift */,
 				8451457723B6267400E41CEF /* constants.swift */,
+				8451457923B637F900E41CEF /* AttributedText.swift */,
+				8451457B23B657BA00E41CEF /* UIActivityIndicatorView.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -451,8 +457,10 @@
 				8451456E23B6184500E41CEF /* Commit.swift in Sources */,
 				8451457023B61A6000E41CEF /* CommitApiService.swift in Sources */,
 				84DE698423B60DA400AB4B13 /* RailsCommitsTableViewController.swift in Sources */,
+				8451457C23B657BA00E41CEF /* UIActivityIndicatorView.swift in Sources */,
 				8451457323B61B3800E41CEF /* helperfunctions.swift in Sources */,
 				84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */,
+				8451457A23B637F900E41CEF /* AttributedText.swift in Sources */,
 				8451457823B6267400E41CEF /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
