@@ -3,20 +3,24 @@ PODS:
   - NVActivityIndicatorView (3.7.0):
     - NVActivityIndicatorView/Presenter (= 3.7.0)
   - NVActivityIndicatorView/Presenter (3.7.0)
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - NVActivityIndicatorView (~> 3.0)
+  - Toast-Swift (~> 3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - NVActivityIndicatorView
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: f96a2fcc0bbd10fdad0af85a9de047f9371d33dc
+PODFILE CHECKSUM: 3a2023c9c86b65d07e1ea7a839d462680add74a8
 
 COCOAPODS: 1.8.4

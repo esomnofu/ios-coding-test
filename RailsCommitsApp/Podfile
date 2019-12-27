@@ -7,6 +7,7 @@ target 'RailsCommitsApp' do
 
   # Pods for RailsCommitsApp
   pod 'Alamofire', '~> 4.7'
+  pod 'Toast-Swift', '~> 3.0'
   pod 'NVActivityIndicatorView', '~> 3.0'
 
   target 'RailsCommitsAppTests' do

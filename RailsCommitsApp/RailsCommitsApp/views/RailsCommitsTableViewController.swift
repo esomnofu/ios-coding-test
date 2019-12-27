@@ -1,18 +1,15 @@
-//
-//  RailsCommitsTableViewController.swift
-//  RailsCommitsApp
-//
-//  Created by Malik on 27/12/2019.
-//  Copyright © 2019 MrOfu. All rights reserved.
-//
-
 import UIKit
 
 class RailsCommitsTableViewController: UITableViewController {
 
+    let loader = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
+        loader.style = .whiteLarge
+        loader.backgroundColor = .green
+        fetchAllRecentCommits()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,6 +25,27 @@ class RailsCommitsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return  100
+    }
+    
+    
+    
+    func fetchAllRecentCommits(){
+        loader.startAnimating()
+        CommitApiService.sharedInstance.fetchCommitsFromApi(completion: { (fetchedCommitsArray) in
+            self.loader.stopAnimating()
+            print("res in view: ", fetchedCommitsArray)
+        }) { (err) in
+            self.loader.stopAnimating()
+            self.callErrorHandler()
+        }
+    }
+    
+    
+    func callErrorHandler(){
+        handlePoorNetworkConnection(completion: {
+            //call the API Call
+            self.fetchAllRecentCommits()
+        }, selfView: self)
     }
 
 }
