@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8451456E23B6184500E41CEF /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451456D23B6184500E41CEF /* Commit.swift */; };
 		84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE695223B60C4E00AB4B13 /* AppDelegate.swift */; };
 		84DE695823B60C4E00AB4B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695623B60C4E00AB4B13 /* Main.storyboard */; };
 		84DE695A23B60C6A00AB4B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695923B60C6A00AB4B13 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8451456D23B6184500E41CEF /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		84DE694F23B60C4E00AB4B13 /* RailsCommitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailsCommitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE695223B60C4E00AB4B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DE695723B60C4E00AB4B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		84DE698123B60D6300AB4B13 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8451456D23B6184500E41CEF /* Commit.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451456E23B6184500E41CEF /* Commit.swift in Sources */,
 				84DE698423B60DA400AB4B13 /* RailsCommitsTableViewController.swift in Sources */,
 				84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */,
 			);

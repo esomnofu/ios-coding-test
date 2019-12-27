@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'RailsCommitsApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RailsCommitsApp
+  pod 'Alamofire', '~> 4.7'
+  pod 'NVActivityIndicatorView', '~> 3.0'
+
+  target 'RailsCommitsAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RailsCommitsAppUITests' do
+    # Pods for testing
+  end
+
+end

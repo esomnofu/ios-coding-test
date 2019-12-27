@@ -1,0 +1,6 @@
+framework module Pods_RailsCommitsAppTests {
+  umbrella header "Pods-RailsCommitsAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

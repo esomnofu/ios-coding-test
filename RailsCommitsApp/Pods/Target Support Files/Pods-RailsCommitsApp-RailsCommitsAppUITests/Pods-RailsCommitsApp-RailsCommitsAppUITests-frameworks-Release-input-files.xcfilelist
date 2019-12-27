@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-RailsCommitsApp-RailsCommitsAppUITests/Pods-RailsCommitsApp-RailsCommitsAppUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
