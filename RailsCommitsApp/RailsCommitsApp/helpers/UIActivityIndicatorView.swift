@@ -8,7 +8,7 @@ let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width:
 
 let aview : UIView = {
     let view = UIView()
-    view.backgroundColor = UIColor.white
+    view.backgroundColor = UIColor.lightGray
     view.layer.cornerRadius = 5
     view.clipsToBounds = true
     view.isOpaque = false

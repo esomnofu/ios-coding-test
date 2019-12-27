@@ -3,11 +3,12 @@ import UIKit
 class RailsCommitsTableViewController: UITableViewController {
 
     let reuseIdentifier = "reuseIdentifier"
+    var localCurrentCount = 1
     var localCommitsArray = [Commit]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAllRecentCommits()
+        fetchAllRecentCommits(currentCount: localCurrentCount)
         view.backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
@@ -41,26 +42,51 @@ class RailsCommitsTableViewController: UITableViewController {
     
     
     
-    func fetchAllRecentCommits(){
+    func fetchAllRecentCommits(currentCount:Int){
         START_PAGE_LOADING(viewcontroller: self)
+        
         CommitApiService.sharedInstance.fetchCommitsFromApi(completion: { (fetchedCommitsArray) in
-            CLEAR_PAGE_LOADING_AND_TOASTS(viewcontroller: self)
-            self.localCommitsArray = fetchedCommitsArray
-            self.tableView.reloadData()
+            
+            //ADD VALUES TO LOCAL REF
+            self.addToLocalCommitsArray(array: fetchedCommitsArray)
+            
+            //CHECK IF EMPTY AND ALERT USER
             if self.localCommitsArray.count == 0 {
                 let alert = UIAlertController.alert(title: NO_COMMIT_TITLE, message: NO_COMMIT_MESSAGE)
                 self.present(alert, animated: true)
             }
-        }) { (err) in
+            
+            //DETERMINE IF WE RECURSIVELY CALL FXN AGAIN OR DISPLAY TO USERS
+            if self.localCommitsArray.count < MINIMUM_COMMITS_TO_DISPLAY {
+                self.localCurrentCount += 1
+                self.fetchAllRecentCommits(currentCount: self.localCurrentCount)
+            }else {
+                CLEAR_PAGE_LOADING_AND_TOASTS(viewcontroller: self)
+                self.localCommitsArray = fetchedCommitsArray
+                self.tableView.reloadData()
+            }
+           
+      
+        }, errorCompletion: { (err) in
             CLEAR_PAGE_LOADING_AND_TOASTS(viewcontroller: self)
             self.callErrorHandler()
+        }, CURRENT_PAGE: currentCount)
+        
+        
+    }
+    
+    func addToLocalCommitsArray(array: [Commit]){
+        if array.count > 0 {
+            for eachCommit in array {
+                self.localCommitsArray.append(eachCommit)
+            }
         }
     }
     
     func callErrorHandler(){
         handlePoorNetworkConnection(completion: {
             //call the API Call
-            self.fetchAllRecentCommits()
+            self.fetchAllRecentCommits(currentCount: self.localCurrentCount)
         }, selfView: self)
     }
 
