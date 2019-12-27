@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE695223B60C4E00AB4B13 /* AppDelegate.swift */; };
-		84DE695523B60C4E00AB4B13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE695423B60C4E00AB4B13 /* ViewController.swift */; };
 		84DE695823B60C4E00AB4B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695623B60C4E00AB4B13 /* Main.storyboard */; };
 		84DE695A23B60C6A00AB4B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695923B60C6A00AB4B13 /* Assets.xcassets */; };
 		84DE695D23B60C6A00AB4B13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE695B23B60C6A00AB4B13 /* LaunchScreen.storyboard */; };
 		84DE696823B60C6B00AB4B13 /* RailsCommitsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE696723B60C6B00AB4B13 /* RailsCommitsAppTests.swift */; };
 		84DE697323B60C6B00AB4B13 /* RailsCommitsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE697223B60C6B00AB4B13 /* RailsCommitsAppUITests.swift */; };
+		84DE698423B60DA400AB4B13 /* RailsCommitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE698323B60DA400AB4B13 /* RailsCommitsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		84DE694F23B60C4E00AB4B13 /* RailsCommitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailsCommitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE695223B60C4E00AB4B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84DE695423B60C4E00AB4B13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84DE695723B60C4E00AB4B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84DE695923B60C6A00AB4B13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DE695C23B60C6A00AB4B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		84DE696E23B60C6B00AB4B13 /* RailsCommitsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailsCommitsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE697223B60C6B00AB4B13 /* RailsCommitsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsCommitsAppUITests.swift; sourceTree = "<group>"; };
 		84DE697423B60C6B00AB4B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DE698323B60DA400AB4B13 /* RailsCommitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsCommitsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,10 @@
 		84DE695123B60C4E00AB4B13 /* RailsCommitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				84DE698223B60D7000AB4B13 /* views */,
+				84DE698123B60D6300AB4B13 /* model */,
+				84DE698023B60D5500AB4B13 /* services */,
 				84DE695223B60C4E00AB4B13 /* AppDelegate.swift */,
-				84DE695423B60C4E00AB4B13 /* ViewController.swift */,
 				84DE695623B60C4E00AB4B13 /* Main.storyboard */,
 				84DE695923B60C6A00AB4B13 /* Assets.xcassets */,
 				84DE695B23B60C6A00AB4B13 /* LaunchScreen.storyboard */,
@@ -123,6 +125,28 @@
 				84DE697423B60C6B00AB4B13 /* Info.plist */,
 			);
 			path = RailsCommitsAppUITests;
+			sourceTree = "<group>";
+		};
+		84DE698023B60D5500AB4B13 /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		84DE698123B60D6300AB4B13 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		84DE698223B60D7000AB4B13 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				84DE698323B60DA400AB4B13 /* RailsCommitsTableViewController.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DE695523B60C4E00AB4B13 /* ViewController.swift in Sources */,
+				84DE698423B60DA400AB4B13 /* RailsCommitsTableViewController.swift in Sources */,
 				84DE695323B60C4E00AB4B13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
